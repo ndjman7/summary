@@ -2,24 +2,26 @@
 `풀이`
 코드를 참조하면 , n이 0과 1일 때 해당 인자를 1씩 더해주면서 문제를 풀었다.
 그리고 0과 1이 아닐 때에는 각각 반환 받은 인자를 서로 더해줘서 반환해주는 쉬운 문제였다.
-하지만, 언어의 문제 탓인지 모르겠지만, 너무 느려서 시간 초과에 문제에 봉착했고, memorize를 쓰기로 했다.
+하지만, 언어의 문제 탓인지 모르겠지만, 너무 느려서 시간 초과에 문제에 봉착했고, `memorize`를 쓰기로 했다.
 하지만 간단한 memorize밖에 안해봐서 인자가 여러개일 때에는 어떻게 대처해야하는지에 대한 방법을 얻은 좋은 문제였던 것 같다.
 
-
 --------------------
+
 다음 소스는 N번째 피보나치 함수를 구하는 함수이다.
 
-	int fibonacci(int n) {
-	    if (n==0) {
-		printf("0");
-		return 0;
-	    } else if (n==1) {
-		printf("1");
-		return 1;
-	    } else {
-		return fibonacci(n‐1) + fibonacci(n‐2);
-	    }
-	}
+```C
+int fibonacci(int n) {
+    if (n==0) {
+	printf("0");
+	return 0;
+    } else if (n==1) {
+	printf("1");
+	return 1;
+    } else {
+	return fibonacci(n‐1) + fibonacci(n‐2);
+    }
+}
+```
 	
 fibonacci(3)을 호출하면 다음과 같은 일이 일어난다.
 fibonacci(3)은 fibonacci(2)와 fibonacci(1) (첫 번째 호출)을 호출한다.
